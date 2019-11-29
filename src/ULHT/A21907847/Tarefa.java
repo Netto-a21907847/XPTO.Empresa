@@ -2,7 +2,7 @@ package ULHT.A21907847;
 
 class Tarefa {
     private String descricao;
-    private String mes;
+    protected String mes;
     private int nrHrs;
     private int prioridade;
 
