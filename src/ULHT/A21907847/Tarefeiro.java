@@ -5,8 +5,8 @@ import java.util.List;
 
 class Tarefeiro extends FuncionarioComTarefas {
 
-    public Tarefeiro(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
-        super(nome, apelido, idFuncionario, nif, salarioBase);
+    public Tarefeiro(String nome, String apelido, int idFuncionario, int nif) {
+        super(nome, apelido, idFuncionario, nif);
         this.listaTarefas = new ArrayList<>();
     }
 
@@ -30,7 +30,7 @@ class Tarefeiro extends FuncionarioComTarefas {
         for (Tarefa tarefas : listaTarefas) {
             relatorio.add("Tarefa: " + tarefas.getDescricao() + " NrHrs" + tarefas.getNrHrs());
         }
-        return "> " + getNome() + " " + getApelido() + "\n" + listaTarefas.get(0).getMes() + "\n" + relatorio;
+        return "> " + getNome() + " " + getApelido() + "\n" + listaTarefas.get(0).getMes() + "\nNrTarefas: " + nrTarefas() + " HrsTarefa: " + nrHrsTotalDeTarefas();
     }
 
     @Override

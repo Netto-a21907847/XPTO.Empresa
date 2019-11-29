@@ -6,8 +6,8 @@ import java.util.List;
 abstract class FuncionarioComTarefas extends Funcionario {
     protected List<Tarefa> listaTarefas;
 
-    public FuncionarioComTarefas(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
-        super(nome, apelido, idFuncionario, nif, salarioBase);
+    public FuncionarioComTarefas(String nome, String apelido, int idFuncionario, int nif) {
+        super(nome, apelido, idFuncionario, nif);
         this.listaTarefas = new ArrayList<>();
     }
 
@@ -20,9 +20,7 @@ abstract class FuncionarioComTarefas extends Funcionario {
     }
 
     public void removeTarefa(Tarefa tarefa) {
-        if (listaTarefas.contains(tarefa)) {
-            listaTarefas.remove(tarefa);
-        }
+        listaTarefas.remove(tarefa);
     }
 
     public void limparListaTarefas(List<Tarefa> listaTarefas) {

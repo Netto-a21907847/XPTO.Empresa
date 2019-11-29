@@ -5,8 +5,8 @@ import java.util.List;
 
 class Gestor extends FuncionarioComTarefas {
 
-    public Gestor(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
-        super(nome, apelido, idFuncionario, nif, salarioBase);
+    public Gestor(String nome, String apelido, int idFuncionario, int nif) {
+        super(nome, apelido, idFuncionario, nif);
         this.listaTarefas = new ArrayList<>();
     }
 
@@ -21,7 +21,7 @@ class Gestor extends FuncionarioComTarefas {
         for (Tarefa tarefas : listaTarefas) {
             relatorio.add("Tarefa: " + tarefas.getDescricao() + " NrHrs" + tarefas.getNrHrs());
         }
-        return "> " + getNome() + " " + getApelido() + "\n" + listaTarefas.get(0).getMes() + "\n" + relatorio;
+        return "> " + getNome() + " " + getApelido() + "\n" + listaTarefas.get(0).getMes() + "\nNrTarefas: " + nrTarefas() + " HrsTarefas: " + nrHrsTotalDeTarefas();
     }
 
     @Override

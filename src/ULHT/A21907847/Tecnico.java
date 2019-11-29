@@ -2,8 +2,8 @@ package ULHT.A21907847;
 
 class Tecnico extends Funcionario {
 
-    public Tecnico(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
-        super(nome, apelido, idFuncionario, nif, salarioBase);
+    public Tecnico(String nome, String apelido, int idFuncionario, int nif) {
+        super(nome, apelido, idFuncionario, nif);
     }
 
     @Override

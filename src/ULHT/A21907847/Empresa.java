@@ -25,9 +25,8 @@ class Empresa {
     }
 
     public void removeFuncionario(Funcionario funcionario) {
-        if (listaFuncionarios.contains(funcionario)) {
-            listaFuncionarios.remove(funcionario);
-        }
+        listaFuncionarios.remove(funcionario);
+
     }
 
     public void addCliente(Cliente cliente) {
@@ -35,9 +34,7 @@ class Empresa {
     }
 
     public void removeCliente(Cliente cliente) {
-        if (listaClientes.contains(cliente)) {
-            listaClientes.remove(cliente);
-        }
+        listaClientes.remove(cliente);
     }
 
     public void addTarefas(Tarefa tarefa) {
@@ -45,9 +42,7 @@ class Empresa {
     }
 
     public void removeTarefas(Tarefa tarefa) {
-        if (listaTarefasServicos.contains(tarefa)) {
-            listaTarefasServicos.remove(tarefa);
-        }
+        listaTarefasServicos.remove(tarefa);
     }
 
     @Override

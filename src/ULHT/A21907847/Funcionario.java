@@ -7,12 +7,12 @@ abstract class Funcionario {
     private int nif;
     protected int salarioBase;
 
-    public Funcionario(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
+    public Funcionario(String nome, String apelido, int idFuncionario, int nif) {
         this.nome = nome;
         this.apelido = apelido;
         this.IdFuncionario = idFuncionario; // consigo fazer um SWITCH relativo a class que for criada?
         this.nif = nif;
-        this.salarioBase = salarioBase;
+        this.salarioBase = 0;
     }
 
     public String getNome() {
