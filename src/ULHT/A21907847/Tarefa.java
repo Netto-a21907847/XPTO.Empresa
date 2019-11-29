@@ -2,12 +2,14 @@ package ULHT.A21907847;
 
 class Tarefa {
     private String descricao;
+    private int idTarefa;
     protected String mes;
     private int nrHrs;
     private int prioridade;
 
-    public Tarefa(String descricao, String mes, int nrHrs, int prioridade) {
+    public Tarefa(String descricao, int idTarefa, String mes, int nrHrs, int prioridade) {
         this.descricao = descricao;
+        this.idTarefa = idTarefa;
         this.mes = mes;
         this.nrHrs = nrHrs;
         this.prioridade = prioridade;
@@ -40,10 +42,9 @@ class Tarefa {
     @Override
     public String toString() {
         return "Tarefa{" +
-                "descricao='" + descricao + '\'' +
+                "idTarefa=" + idTarefa +
                 ", mes='" + mes + '\'' +
                 ", nrHrs=" + nrHrs +
-                ", prioridade=" + prioridade +
                 '}';
     }
 }

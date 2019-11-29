@@ -13,6 +13,6 @@ class Tecnico extends Funcionario {
 
     @Override
     public String toString() {
-        return "> Nr.Funcionario: " + getIdFuncionario() + " | " + getNif() + " | " + getNome() + " " + getApelido() + " < Salario Total:  " + getSalarioBase();
+        return "> Nr.Funcionario: " + getIdFuncionario() + " | Nif: " + getNif() + " | " + getNome() + " " + getApelido() + " | Salario Total: " + getSalarioBase() + " <";
     }
 }

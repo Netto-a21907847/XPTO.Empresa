@@ -5,9 +5,9 @@ import java.util.List;
 
 class Empresa {
     private String nome;
-    private List<Funcionario> listaFuncionarios;
-    private List<Cliente> listaClientes;
-    private List<Tarefa> listaTarefasServicos;
+    public List<Funcionario> listaFuncionarios;
+    public List<Cliente> listaClientes;
+    public List<Tarefa> listaTarefasServicos;
 
     public Empresa(String nome) {
         this.nome = nome;

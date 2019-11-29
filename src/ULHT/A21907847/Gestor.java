@@ -7,6 +7,7 @@ class Gestor extends FuncionarioComTarefas {
 
     public Gestor(String nome, String apelido, int idFuncionario, int nif, int salarioBase) {
         super(nome, apelido, idFuncionario, nif, salarioBase);
+        this.listaTarefas = new ArrayList<>();
     }
 
     @Override
@@ -25,7 +26,13 @@ class Gestor extends FuncionarioComTarefas {
 
     @Override
     public String toString() {
-        return "> Nr.Funcionario: " + getIdFuncionario() + " | " + getNif() + " | " + getNome() + " " + getApelido() + " < Salario Total:  " + calculaSalario(listaTarefas.get(0).getMes());
+        int result;
+        if (listaTarefas.size() == 0){
+            result = salarioBase;
+        } else {
+            result = calculaSalario(listaTarefas.get(0).getMes());
+        }
+        return "> Nr.Funcionario: " + getIdFuncionario() + " | Nif: " + getNif() + " | " + getNome() + " " + getApelido() + " | Salario Total: " + result + " <";
     }
 
 }
