@@ -10,7 +10,7 @@ class Geradores {
         Random gerar = new Random();
         List<Tarefa> listaDeTarefas = new ArrayList<>();
         for (int x = 0; x < 100; x++) {
-            listaDeTarefas.add(new Tarefa("TF", gerar.nextInt(100)+1, "Novembro", gerar.nextInt(15) + 1, gerar.nextInt(3) + 1));
+            listaDeTarefas.add(new Tarefa("TF", gerar.nextInt(100)+1, "Novembro", gerar.nextInt(15) + 1, gerar.nextInt(50) + 1));
         }
         return listaDeTarefas;
     }

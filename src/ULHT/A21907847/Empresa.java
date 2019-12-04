@@ -45,16 +45,19 @@ class Empresa {
         listaTarefasServicos.remove(tarefa);
     }
 
-    public void relatorioClientes (List<Cliente> clientes){
+    public void relatorioClientes (){
         for (Cliente percorreClientes : listaClientes){
             System.out.println(percorreClientes.relatorioCliente());
         }
     }
 
-    public void relatorioClientesEcomendas (List<Cliente> clientes){
+    public void relatorioClientesEcomendas (){
         for (Cliente percorreClientes : listaClientes){
             System.out.println(percorreClientes.relatorioCliente());
-            System.out.println(percorreClientes.servicosContratados);
+            //System.out.println(percorreClientes.servicosContratados);
+            System.out.println("Mês: " + percorreClientes.servicosContratados.get(0).getMes());
+            System.out.println("Qtd de tarefas: " + percorreClientes.servicosContratados.size());
+            System.out.println("Valor total das Tarefas: " + percorreClientes.somaValorDasTarefas() + " €");
         }
     }
 

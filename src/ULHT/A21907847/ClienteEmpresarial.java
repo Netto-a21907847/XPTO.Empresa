@@ -1,6 +1,6 @@
 package ULHT.A21907847;
 
-public class ClienteEmpresarial extends Cliente {
+class ClienteEmpresarial extends Cliente {
     private String responsavel;
     private int contactoResponsavel;
 
@@ -12,6 +12,6 @@ public class ClienteEmpresarial extends Cliente {
 
     @Override
     public String relatorioCliente() {
-        return "** Nome: " + getNome() + " Nr.Tlm: " + getContactoTelefonico() + " Nif: " + getNif() + " **\n** Responsavel: " + this.responsavel + " Tlm: " + this.contactoResponsavel + " **";
+        return "** Nome: " + getNome() + " Nr.Tlm: " + getContactoTelefonico() + " Nif: " + getNif() + " **\nResponsavel: " + this.responsavel + " Tlm: " + this.contactoResponsavel;
     }
 }

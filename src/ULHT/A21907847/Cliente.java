@@ -8,7 +8,7 @@ abstract class Cliente {
     private String nome;
     private int contactoTelefonico;
     private int nif;
-    public List<Tarefa> servicosContratados;
+    protected List<Tarefa> servicosContratados;
 
     public Cliente(String nome, int contactoTelefonico, int nif) {
         this.nome = nome;
@@ -35,6 +35,14 @@ abstract class Cliente {
 
     public int getNif() {
         return nif;
+    }
+
+    public int somaValorDasTarefas (){
+        int result = 0;
+        for (Tarefa tarefaPer: servicosContratados){
+            result += tarefaPer.getValor();
+        }
+        return result;
     }
 
     public String relatorioCliente() {

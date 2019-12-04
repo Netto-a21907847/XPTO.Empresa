@@ -7,14 +7,14 @@ class Tarefa {
     private int idTarefa;
     protected String mes;
     private int nrHrs;
-    private int prioridade;
+    private int valor;
 
-    public Tarefa(String descricao, int idTarefa, String mes, int nrHrs, int prioridade) {
+    public Tarefa(String descricao, int idTarefa, String mes, int nrHrs, int valor) {
         this.descricao = descricao;
         this.idTarefa = idTarefa;
         this.mes = mes;
         this.nrHrs = nrHrs;
-        this.prioridade = prioridade;
+        this.valor = valor;
     }
 
     public String getDescricao() {
@@ -29,10 +29,6 @@ class Tarefa {
         return nrHrs;
     }
 
-    public int getPrioridade() {
-        return prioridade;
-    }
-
     public void setMes(String mes) {
         this.mes = mes;
     }
@@ -41,12 +37,18 @@ class Tarefa {
         this.nrHrs = nrHrs;
     }
 
+    public int getValor() {
+        return valor;
+    }
+
     @Override
     public String toString() {
         return "Tarefa{" +
-                "idTarefa=" + idTarefa +
+                "descricao='" + descricao + '\'' +
+                ", idTarefa=" + idTarefa +
                 ", mes='" + mes + '\'' +
                 ", nrHrs=" + nrHrs +
+                ", valor=" + valor +
                 '}';
     }
 }
