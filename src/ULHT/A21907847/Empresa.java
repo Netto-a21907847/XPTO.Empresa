@@ -45,6 +45,19 @@ class Empresa {
         listaTarefasServicos.remove(tarefa);
     }
 
+    public void relatorioClientes (List<Cliente> clientes){
+        for (Cliente percorreClientes : listaClientes){
+            System.out.println(percorreClientes.relatorioCliente());
+        }
+    }
+
+    public void relatorioClientesEcomendas (List<Cliente> clientes){
+        for (Cliente percorreClientes : listaClientes){
+            System.out.println(percorreClientes.relatorioCliente());
+            System.out.println(percorreClientes.servicosContratados);
+        }
+    }
+
     @Override
     public String toString() {
         return "Empresa{" +
