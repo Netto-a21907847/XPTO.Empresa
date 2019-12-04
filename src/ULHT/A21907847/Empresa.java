@@ -54,10 +54,10 @@ class Empresa {
     public void relatorioClientesEcomendas (){
         for (Cliente percorreClientes : listaClientes){
             System.out.println(percorreClientes.relatorioCliente());
-            //System.out.println(percorreClientes.servicosContratados);
             System.out.println("Mês: " + percorreClientes.servicosContratados.get(0).getMes());
             System.out.println("Qtd de tarefas: " + percorreClientes.servicosContratados.size());
             System.out.println("Valor total das Tarefas: " + percorreClientes.somaValorDasTarefas() + " €");
+            System.out.println(percorreClientes.servicosContratados);
         }
     }
 
