@@ -1,5 +1,7 @@
 package ULHT.A21907847;
 
+import java.util.Date;
+
 class Tarefa {
     private String descricao;
     private int idTarefa;

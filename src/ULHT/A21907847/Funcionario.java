@@ -10,7 +10,7 @@ abstract class Funcionario {
     public Funcionario(String nome, String apelido, int idFuncionario, int nif) {
         this.nome = nome;
         this.apelido = apelido;
-        this.IdFuncionario = idFuncionario; // consigo fazer um SWITCH relativo a class que for criada?
+        this.IdFuncionario = idFuncionario;
         this.nif = nif;
         this.salarioBase = 0;
     }
@@ -39,7 +39,9 @@ abstract class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    abstract int calculaSalario(String mes);
+    public int calculaSalario(String mes){
+        return this.salarioBase;
+    };
 
     @Override
     public String toString() {

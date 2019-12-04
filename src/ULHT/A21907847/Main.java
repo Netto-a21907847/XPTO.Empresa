@@ -1,9 +1,13 @@
 package ULHT.A21907847;
 
 
+import java.util.Date;
+
 public class Main {
 
+
     public static void main(String[] args) {
+
         Empresa emp1 = new Empresa("XPTO");
         emp1.listaTarefasServicos = Geradores.geradorDeTarefas();
         System.out.println(emp1.listaTarefasServicos.size());
@@ -11,15 +15,15 @@ public class Main {
         Tarefa t1 = new Tarefa("Limpar Cabos", 13, "Novembro", 4, 1);
         emp1.addTarefas(t1);
         System.out.println(emp1.listaTarefasServicos.size());
-        Funcionario g1 = new Gestor("Fernando", "Prass", 1111, 11111);
-        Funcionario tf1 = new Tarefeiro("Jorge", "Mendonça", 2222, 22222);
+        FuncionarioComTarefas g1 = new Gestor("Fernando", "Prass", 1111, 11111);
+        FuncionarioComTarefas tf1 = new Tarefeiro("Jorge", "Mendonça", 2222, 22222);
         Tarefeiro tf2 = new Tarefeiro("Paula", "Cristina", 2111, 21111);
         Funcionario tec1 = new Tecnico("Jorge", "Valdivia", 5555, 55555);
         emp1.addFuncionario(g1);
         emp1.addFuncionario(tf1);
         emp1.addFuncionario(tf2);
         emp1.addFuncionario(tec1);
-        Gestor g2 = new Gestor("Pedro", "Alves", 1222, 12222);
+        FuncionarioComTarefas g2 = new Gestor("Pedro", "Alves", 1222, 12222);
         emp1.addFuncionario(g2);
         g1.setSalarioBase(1000);
         g2.setSalarioBase(2000);
@@ -35,7 +39,7 @@ public class Main {
             if (listaDeTarefas.getNrHrs() > 10) {
                 g2.listaTarefas.add(listaDeTarefas);
             } else {
-                ((Gestor) g1).listaTarefas.add(listaDeTarefas);
+                g1.listaTarefas.add(listaDeTarefas);
             }
         }
         // esta adicionando as tarefas para os tarefeiros onde 1 recebe 100 trabalhos e 75 hrs
@@ -71,6 +75,12 @@ public class Main {
         System.out.println(g2.relatorioMensal("Novembro"));
         System.out.println(((Tarefeiro) tf1).relatorioMensal("Novembro"));
         System.out.println(tf2.relatorioMensal("Novembro"));
+
+
+        System.out.println();
+
+
+
 
 
 

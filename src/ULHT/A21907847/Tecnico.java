@@ -7,11 +7,6 @@ class Tecnico extends Funcionario {
     }
 
     @Override
-    int calculaSalario(String mes) {
-        return getSalarioBase();
-    }
-
-    @Override
     public String toString() {
         return "> Nr.Funcionario: " + getIdFuncionario() + " | Nif: " + getNif() + " | " + getNome() + " " + getApelido() + " | Salario Total: " + getSalarioBase() + " <";
     }

@@ -7,7 +7,6 @@ class Tarefeiro extends FuncionarioComTarefas {
 
     public Tarefeiro(String nome, String apelido, int idFuncionario, int nif) {
         super(nome, apelido, idFuncionario, nif);
-        this.listaTarefas = new ArrayList<>();
     }
 
     public int calculaBonus() {
@@ -19,7 +18,7 @@ class Tarefeiro extends FuncionarioComTarefas {
     }
 
     @Override
-    int calculaSalario(String mes) {
+    public int calculaSalario(String mes) {
         setSalarioBase(505);
         return getSalarioBase() + (2 * nrHrsTotalDeTarefas()) + calculaBonus();
     }

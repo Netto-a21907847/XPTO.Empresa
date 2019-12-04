@@ -7,11 +7,10 @@ class Gestor extends FuncionarioComTarefas {
 
     public Gestor(String nome, String apelido, int idFuncionario, int nif) {
         super(nome, apelido, idFuncionario, nif);
-        this.listaTarefas = new ArrayList<>();
     }
 
     @Override
-    int calculaSalario(String mes) {
+    public int calculaSalario(String mes) {
         return (int) (getSalarioBase() + (0.5 * nrTarefas()));
     }
 
