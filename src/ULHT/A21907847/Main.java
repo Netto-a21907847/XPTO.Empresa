@@ -64,6 +64,7 @@ public class Main {
         System.out.println(g2.nrTarefas());
         System.out.println(g1);
         System.out.println(g2);
+        g1.relatorioMensal(g1.listaTarefas.get(0).getMes());
 
         emp1.listaTarefasServicos.remove(t1);
         System.out.println(emp1.listaTarefasServicos.size());
@@ -86,11 +87,12 @@ public class Main {
         System.out.println();
         System.out.println("Agora relatorio de clientes com tarefas\n");
         // adicionar 10 tarefas a cada cliente
-        /*for (Cliente clientesP : emp1.listaClientes) {
-            for (int y = (int) (Math.random() * 20) + 1; y < y + 10; y++) {
-                clientesP.addServico(emp1.listaTarefasServicos.get(y));
+        for (Cliente clientesP : emp1.listaClientes) {
+            int y = (int) (Math.random() * 20);
+            for (int x = y; x < (y + 10); x++) {
+                clientesP.addServico(emp1.listaTarefasServicos.get(x));
             }
-        }*/
+        }
         c1.addServico(emp1.listaTarefasServicos.get(0));
         c1.addServico(emp1.listaTarefasServicos.get(1));
         c1.addServico(emp1.listaTarefasServicos.get(3));

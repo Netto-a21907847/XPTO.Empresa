@@ -41,6 +41,13 @@ abstract class FuncionarioComTarefas extends Funcionario {
         return result;
     }
 
-    abstract String relatorioMensal(String mes);
+
+    public String relatorioMensal(String mes) {
+        List<String> relatorio = new ArrayList<>();
+        for (Tarefa tarefas : listaTarefas) {
+            relatorio.add("Tarefa: " + tarefas.getDescricao() + " NrHrs" + tarefas.getNrHrs());
+        }
+        return "> " + getNome() + " " + getApelido() + "\n" + listaTarefas.get(0).getMes() + "\nNrTarefas: " + nrTarefas() + " HrsTarefas: " + nrHrsTotalDeTarefas();
+    }
 
 }

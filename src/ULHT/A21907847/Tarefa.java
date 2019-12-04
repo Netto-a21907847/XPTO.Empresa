@@ -1,7 +1,5 @@
 package ULHT.A21907847;
 
-import java.util.Date;
-
 class Tarefa {
     private String descricao;
     private int idTarefa;
@@ -29,13 +27,13 @@ class Tarefa {
         return nrHrs;
     }
 
-    public void setMes(String mes) {
+    /*public void setMes(String mes) {
         this.mes = mes;
-    }
+    }*/
 
-    public void setNrHrs(int nrHrs) {
+    /*public void setNrHrs(int nrHrs) {
         this.nrHrs = nrHrs;
-    }
+    }*/
 
     public int getValor() {
         return valor;
