@@ -45,24 +45,24 @@ public class Main {
         // esta adicionando as tarefas para os tarefeiros onde 1 recebe 100 trabalhos e 75 hrs
         for (Tarefa listaDeTarefasRepetida : emp1.listaTarefasServicos) {
             for (Tarefa listaRepete : emp1.listaTarefasServicos) {
-                if (tf2.listaTarefas.size() < 100 && tf2.nrHrsTotalDeTarefas() < 75 && listaRepete.getNrHrs() == 1 ) {
+                if (tf2.listaTarefas.size() < 100 && tf2.nrHrsTotalDeTarefas() < 75 && listaRepete.getNrHrs() == 1) {
                     tf2.listaTarefas.add(listaRepete);
                 } else {
-                    ((Tarefeiro) tf1).listaTarefas.add(listaRepete);
+                    tf1.listaTarefas.add(listaRepete);
                 }
             }
         }
 
         System.out.println(tf2.listaTarefas.size());
         System.out.println("Tamanho da lista dos tarefeitos: tf1 / tf2");
-        System.out.println(((Tarefeiro) tf1).listaTarefas.size());
+        System.out.println(tf1.listaTarefas.size());
         System.out.println(tf2.listaTarefas.size());
         System.out.println(tf1);
         System.out.println(tf2);
 
 
         System.out.println("Tamanho da lista dos Gestores: g1 / g2");
-        System.out.println(((Gestor) g1).nrTarefas());
+        System.out.println(g1.nrTarefas());
         System.out.println(g2.nrTarefas());
         System.out.println(g1);
         System.out.println(g2);
@@ -71,17 +71,13 @@ public class Main {
         System.out.println(emp1.listaTarefasServicos.size());
         System.out.println();
         System.out.println("Relatorios");
-        System.out.println(((Gestor) g1).relatorioMensal("Novembro"));
+        System.out.println(g1.relatorioMensal("Novembro"));
         System.out.println(g2.relatorioMensal("Novembro"));
-        System.out.println(((Tarefeiro) tf1).relatorioMensal("Novembro"));
+        System.out.println(tf1.relatorioMensal("Novembro"));
         System.out.println(tf2.relatorioMensal("Novembro"));
 
 
         System.out.println();
-
-
-
-
 
 
     }
